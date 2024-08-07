@@ -17,8 +17,9 @@ function logMethod(target: Object, propertyKey: string, descriptor: PropertyDesc
 // Caching Decorator
 function cacheResult(target: Object, propertyKey: string, descriptor: PropertyDescriptor) {
   const originalMethod = descriptor.value;
+  
   const cache = new Map();
-
+  console.log('cache', cache);
   descriptor.value = function(...args: any[]) {
     const cacheKey = `${propertyKey}(${args.join(',')})`;
     if (cache.has(cacheKey)) {
@@ -28,9 +29,11 @@ function cacheResult(target: Object, propertyKey: string, descriptor: PropertyDe
 
     const result = originalMethod.apply(this, args);
     cache.set(cacheKey, result);
+    console.log('cache', cache);
     return result;
   };
 
+  console.log('cache', cache);
   return descriptor;
 }
 

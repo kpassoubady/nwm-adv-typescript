@@ -30,4 +30,4 @@ class UserService {
 
 const userService = new UserService();
 userService.createUser('John Doe', 30); // Output: Creating user John Doe with age 30
-userService.createUser('Jane Smith', '25'); // Throws an error: Invalid parameter type for argument 2
+//userService.createUser('Jane Smith', '25'); // Throws an error: Invalid parameter type for argument 2

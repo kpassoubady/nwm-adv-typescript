@@ -38,5 +38,5 @@ class Person {
 
 const person = new Person('John Doe');
 console.log(person.name); // Getting value of name
-person.name = 'Jane Doe'; // Setting value of name to Jane Doe
+person.name = 'Casey Miller'; // Setting value of name to Casey Miller
 console.log(person.name); // Getting value of name
