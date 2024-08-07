@@ -4,6 +4,8 @@ In a financial application, you might need to process different types of transac
 such as deposits, withdrawals, and transfers
 */
 
+export {}
+
 // Define a generic interface for transactions
 interface Transaction<T> {
   amount: number;

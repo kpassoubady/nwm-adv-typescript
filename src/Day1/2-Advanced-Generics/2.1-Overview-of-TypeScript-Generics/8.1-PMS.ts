@@ -5,6 +5,7 @@ such as stocks, bonds, and real estate properties.
 To handle these various asset types efficiently, you can use generics to create a flexible 
 and reusable component for managing the portfolio. 
 */
+export {}
 
 interface Stock {
   ticker: string;

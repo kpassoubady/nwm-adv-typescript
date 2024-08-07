@@ -4,6 +4,7 @@ In a real estate application, you might deal with various types of properties
 such as houses, apartments, and commercial spaces. 
 You can use generics to handle different property listings uniformly.
 */
+export {}
 
 // Define a generic interface for property listings
 interface PropertyListing<T> {
