@@ -10,7 +10,7 @@ interface Person {
 }
 
 //You can cast an object to a type using the as keyword
-// let person: Person = {} as Person;
+let person: Person = {} as Person;
 // let personWithoutAddress:Person = {
 //   name: "Kangs",
 //   age: 30
