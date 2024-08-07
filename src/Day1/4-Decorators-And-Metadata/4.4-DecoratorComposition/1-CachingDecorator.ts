@@ -1,5 +1,5 @@
 export {};
-
+// Dubgging Example - 1
 // Logging Decorator
 function logMethod(target: Object, propertyKey: string, descriptor: PropertyDescriptor) {
   const originalMethod = descriptor.value;
@@ -19,7 +19,7 @@ function cacheResult(target: Object, propertyKey: string, descriptor: PropertyDe
   const originalMethod = descriptor.value;
   
   const cache = new Map();
-  console.log('cache', cache);
+  console.log(`${propertyKey} cache: ${cache}`);
   descriptor.value = function(...args: any[]) {
     const cacheKey = `${propertyKey}(${args.join(',')})`;
     if (cache.has(cacheKey)) {
@@ -41,14 +41,25 @@ function cacheResult(target: Object, propertyKey: string, descriptor: PropertyDe
 class Calculator {
   @logMethod
   @cacheResult
+  sum(x: number, y: number): number {
+    return x + y;
+  }
+}
+
+class CalculatorExampleB {
+  @logMethod
+  @cacheResult
   add(x: number, y: number): number {
     return x + y;
   }
 }
 
 const calculator = new Calculator();
-console.log(calculator.add(2, 3)); // Output: Method "add" was called with arguments: [2, 3], Method "add" returned: 5
-console.log(calculator.add(2, 3)); // Output: Returning cached result for "add(2,3)"
-console.log(calculator.add(5, 4));
-console.log(calculator.add(2, 3));
+console.log(calculator.sum(2, 3)); // Output: Method "add" was called with arguments: [2, 3], Method "add" returned: 5
+console.log(calculator.sum(2, 3)); // Output: Returning cached result for "add(2,3)"
+console.log(calculator.sum(5, 4));
+console.log(calculator.sum(2, 3));
 
+const calculatorB = new CalculatorExampleB();
+console.log(calculatorB.add(2, 3));
+console.log(calculatorB.add(2, 3));
