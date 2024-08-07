@@ -27,4 +27,5 @@ console.log(pair1.getSecond()); // Output: 50
 console.log(pair2.getFirst()); // Output: 100
 console.log(pair2.getSecond()); // Output: true
 
-// let pair3 = new Pair<number, number>(100, true); -- Argument of type 'boolean' is not assignable to parameter of type 'number'.ts(2345)
+//let pair3 = new Pair<number, number>(100, true); //-- Argument of type 'boolean' is not assignable to parameter of type 'number'.ts(2345)
+// let pair4 = new Pair<boolean, string>(100, "true"); // -- Argument of type 'number' is not assignable to parameter of type 'boolean'.ts(2345)

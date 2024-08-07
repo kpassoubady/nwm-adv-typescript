@@ -17,7 +17,10 @@ console.log(length2); // 3
 let length3 = getLength(["kangs","alex","addy","max"]); 
 console.log(length3); // 4
 
-//let lenght4 = getLength(10); // Argument of type '10' is not assignable to parameter of type 'Lengthwise'.ts(2345)
+// let lenght4 = getLength(10); // Argument of type '10' is not assignable to parameter of type 'Lengthwise'.ts(2345)
 
 let length5 = getLength({ length: 10, value: 3 });
 console.log(length5);
+
+//let length6 = getLength({ size: 10, value: 3 }); // Object literal may only specify known properties, and 'size' does not exist in type 'Lengthwise'.ts(2353)
+// console.log(length5);

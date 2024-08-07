@@ -39,5 +39,7 @@ company.addEmployee({ name: "Kangs", age: 25, salary: 50000 });
 company.addEmployee({ name: "Kavya", age: 30, salary: 60000 });
 company.addEmployee({ name: "Dainel", age: 22, salary: 40000 });
 
+//company.addEmployee({ firstName: "Kangs", age: 25, salary: 50000 });
+
 console.log(company.getEmployeeNames()); // Output:[ 'Kangs', 'Kavya', 'Dainel' ]
 console.log(company.getTotalSalary()); // Output: 150000

@@ -19,5 +19,5 @@ greet(name,age,hasHobbies);
 greet("Kavya",12,false);
 greet('Melissa',24,true);
 greet('Paul',30,true);
-// greet('Sam',"40",false);
+//greet('Sam',"40",false);
 
