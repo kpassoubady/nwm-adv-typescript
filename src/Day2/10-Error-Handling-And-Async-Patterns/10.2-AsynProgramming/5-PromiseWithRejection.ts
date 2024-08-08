@@ -9,7 +9,7 @@ function deliverBook(isDelivered: boolean): Promise<string> {
         // Book not delivered
         reject('Book not delivered. No charge made.');
       }
-    }, 1000); // Simulate a 1-second delay
+    }, Math.random() * 2000 + 1); // Maxiumum delay of 2 seconds
   });
 }
 
@@ -46,8 +46,8 @@ async function orderAndDeliverBook(isDelivered: boolean) {
 }
 
 // the below code not synchronized
-orderAndDeliverBook(true); // This should resolve and print success message
-orderAndDeliverBook(false); // This should reject and print error message
+// orderAndDeliverBook(true); // This should resolve and print success message
+// orderAndDeliverBook(false); // This should reject and print error message
 
 async function syncOrder() {
   await orderAndDeliverBook(true); // This should resolve and print success message
@@ -55,9 +55,9 @@ async function syncOrder() {
 }
 
 // this is synchronized call
-// syncOrder()
+syncOrder()
 
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
-sleep(4000);
+sleep(2000);
 
 export { };
