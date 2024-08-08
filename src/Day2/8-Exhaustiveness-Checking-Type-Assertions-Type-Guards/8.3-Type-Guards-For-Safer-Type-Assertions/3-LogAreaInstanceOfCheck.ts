@@ -35,3 +35,8 @@ logArea(circle1);
 
 let rectangle1 = new Rectangle(5,6);
 logArea(rectangle1);
+
+let shape : Shape = circle1;
+logArea(shape);
+shape = rectangle1
+logArea(shape);

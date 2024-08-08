@@ -19,6 +19,6 @@ try {
 } catch (error) {
   // Handle the error
   console.error("Error.Message:", (error as Error).message);
-  console.error("Error.Name:", (error as Error).name);
+  console.error("Error.Name:", (error as CustomError).name);
 }
 

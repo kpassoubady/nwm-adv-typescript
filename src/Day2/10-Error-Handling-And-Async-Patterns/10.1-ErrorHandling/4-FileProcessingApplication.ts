@@ -20,6 +20,14 @@ class PermissionDeniedError extends Error {
   }
 }
 
+// Define custom error class for divide by zero error 
+class divideByZeroError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = this.constructor.name;
+  }
+}
+
 // Process a file
 function processFile(fileName: string): void {
   if (!fileExists(fileName)) {
@@ -55,12 +63,13 @@ function hasPermission(fileName: string): boolean {
 }
 
 // Run with different file names to test error handling
-//let fileName = "nonexistent.txt"
+let fileName = "nonexistent.txt"
 // let fileName = "example.txt"
-let fileName = "example1.txt"
+// let fileName = "example1.txt"
 try {
-  processFile(fileName);
-  console.log("File processed successfully.");
+  //processFile(fileName);
+  throw new divideByZeroError("Cannot divide by zero.");
+  //console.log("File processed successfully.");
 } catch (error) {
   if (error instanceof FileNotFoundError) {
     console.log(error.message);
@@ -68,7 +77,9 @@ try {
   } else if (error instanceof PermissionDeniedError) {
     console.log(error.message);
     console.log("Please check file permissions.") 
+  } else if (error instanceof Error) {
+    console.log("*Error*:", error.message);
   } else {
-    console.log("An error occurred:", (error as Error).message);
+    console.log("An unknown error occurred.");
   }
 }
