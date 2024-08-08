@@ -1,7 +1,7 @@
-export {};
+export { };
 
 // Higher-order function that takes a callback function and a value
-function applyCallback(callback: (value: number) => number, value: number) {
+function applyCallback(callback: (value: number) => number, value: number): number {
   console.log("Applying callback function");
   return callback(value);
 }

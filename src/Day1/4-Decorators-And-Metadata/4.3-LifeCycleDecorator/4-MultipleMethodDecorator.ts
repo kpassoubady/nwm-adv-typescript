@@ -44,4 +44,3 @@ const example = new AnotherExample();
 example.compute(3, 4);
 example.subtract(10, 5);
 
-
