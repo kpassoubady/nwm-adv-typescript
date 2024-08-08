@@ -6,3 +6,4 @@ const compose = <T>(f: (arg: T) => T, g: (arg: T) => T) => (x: T): T => f(g(x));
 const addThenMultiply = compose(multiply, add);
 
 console.log(addThenMultiply(5)); // Output: 12
+// console.log(addThenMultiply("10")); // Argument of type 'string' is not assignable to parameter of type 'number'.ts(2345)

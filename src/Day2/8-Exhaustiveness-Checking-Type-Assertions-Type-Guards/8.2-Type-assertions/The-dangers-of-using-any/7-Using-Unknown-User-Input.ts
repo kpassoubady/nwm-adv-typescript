@@ -14,3 +14,12 @@ function processForm(formData: unknown) {
         console.log("Invalid form data.");
     }
 }
+
+processForm({ name: "Alice", age: "30" });
+processForm({ name: "Bob" });
+processForm("invalid data");
+processForm(null);
+processForm(undefined);
+processForm(123);
+processForm({ firstName: "Alice", zip: "30" });
+

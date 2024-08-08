@@ -32,3 +32,4 @@ function area(shape: Shape) {
 console.log(area({ kind: "square", size: 5 })); 
 console.log(area({ kind: "rectangle", width: 10, height: 5 })); 
 console.log(area({ kind: "circle", radius: 2 })); 
+// console.log(area({ kind: "cube", radius: 2 })); // Type '"cube"' is not assignable to type '"square" | "rectangle" | "circle"'.

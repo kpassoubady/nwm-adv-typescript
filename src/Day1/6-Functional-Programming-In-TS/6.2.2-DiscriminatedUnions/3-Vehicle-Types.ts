@@ -31,3 +31,4 @@ const bicycle: Vehicle = { type: 'bicycle', brand: 'Trek', model: 'FX 3 Disc', n
 printVehicleInfo(car); // This is a Honda Civic car with 4 wheels.
 printVehicleInfo(motorcycle); // This is a Yamaha FZ-09 motorcycle with 2 wheels and a helmet compartment.
 printVehicleInfo(bicycle); // This is a Trek FX 3 Disc bicycle with 2 wheels and a basket.
+// printVehicleInfo({ type: 'car1', brand: 'Trek', model: 'FX 3 Disc', numWheels: 2})

@@ -8,7 +8,7 @@ const add = (a: number, b: number) => a + b;
 const multiply = (a: number, b: number) => a * b;
 //The return type is inferred based on the operation performed
 
-let result = add(2, 3); // result inferred as number
+let result:number = add(2, 3); // result inferred as number
 console.log("Result of Add:" + result);
 result = multiply(2, 3); // result inferred as number
 console.log("Result of Multiply:" + result);

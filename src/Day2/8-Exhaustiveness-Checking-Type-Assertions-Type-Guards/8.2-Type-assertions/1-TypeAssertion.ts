@@ -2,13 +2,13 @@ export { };
 
 // Assertion of a string value:
 const value1: unknown = "Hello, World!";
-const strLength = (value1 as string).length;
+const strLength = (value1 as String).length;
 console.log(strLength); // output: 13
 
 // Assertion of a type with multiple possible types:
 
-const value2: string | number = "123";
-const parsedValue = parseInt(value2 as string, 10);
+const value2: string | number = 123;
+const parsedValue = parseInt(value2.toString(), 10);
 console.log(parsedValue); // output: 123
 
 
