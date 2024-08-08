@@ -11,3 +11,10 @@ Functional composition in TypeScript provides the same benefits as in JavaScript
 | **Type Safety**      | Errors related to types are usually caught at runtime.        | Errors are caught at compile time, providing an additional layer of safety and reducing runtime errors. |
 | **IDE Support**      | Basic IDE support without type information.                   | Enhanced IDE support with type information, including features like autocompletion, refactoring, and navigation. |
 
+
+# Functional Composition in JavaScript and TypeScript
+
+| Feature           | JavaScript                                                                 | TypeScript                                                                                      |
+|-------------------|----------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
+| **Code Example**  | ```javascript<br>const add = (x) => x + 1;<br>const multiply = (x) => x * 2;<br><br>const compose = (f, g) => (x) => f(g(x));<br><br>const addThenMultiply = compose(multiply, add);<br><br>console.log(addThenMultiply(5)); // Output: 12<br>``` | ```typescript<br>const add = (x: number): number => x + 1;<br>const multiply = (x: number): number => x * 2;<br><br>const compose = <T>(f: (arg: T) => T, g: (arg: T) => T) => (x: T): T => f(g(x));<br><br>const addThenMultiply = compose(multiply, add);<br><br>console.log(addThenMultiply(5)); // Output: 12<br>``` |
+
