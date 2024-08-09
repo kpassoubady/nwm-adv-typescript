@@ -14,8 +14,10 @@ npm i
 
 # Visual Studio Extensions
 Install the below extensions if it is not already installed
+
 ## To Run TS and JS files from the Editor
 * Code Runner
+
 ## To Run/Debug Jest Tests
 * Jest
 * Jest Runner
@@ -23,6 +25,7 @@ Install the below extensions if it is not already installed
 
 ## Coverage
 * Coverage Gutterrs
+
 ## TypeScript Helpers
 * Pretty TypeScript Errors
 * TypeScript Preview

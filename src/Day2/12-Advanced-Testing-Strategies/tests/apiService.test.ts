@@ -15,7 +15,7 @@ const mockedApiServiceWithTimeout = apiServiceWithTimeout as jest.Mocked<typeof 
 
 describe('apiService tests', () => {
   test('apiService.fetchData returns mocked data', async () => {
-    mockedApiService.fetchData.mockResolvedValue('mocked data');
+    mockedApiService.fetchData.mockResolvedValue('mocked data 100');
 
     const data = await apiService.fetchData();
     expect(data).toBe('mocked data');
@@ -25,10 +25,13 @@ describe('apiService tests', () => {
 describe('apiServiceWithError tests', () => {
   test('apiServiceWithError.fetchDataWithError throws error', async () => {
     mockedApiServiceWithError.fetchDataWithError.mockRejectedValue(new Error('mock error'));
-
+    
     expect.assertions(1);
     try {
       await apiServiceWithError.fetchDataWithError();
+      const data = await apiService.fetchData();
+      console.log("***data****" + data);
+      expect(data).toBe('mocked data');
     } catch (e) {
       expect((e as Error).message).toBe('mock error');
     }

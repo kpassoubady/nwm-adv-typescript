@@ -9,5 +9,5 @@ test('guessAge returns data', async () => {
   const data = await guessAgeFromAgify('kangeyan');
   console.log("***returned data****" + JSON.stringify(data));
   expect(data.age).toBe(41);
-  expect(data).toEqual({"count":2,"name":"kangeyan","age":41});
+  expect(data).toEqual({"count":2,"name":"kangeyan","age":55});
 });
