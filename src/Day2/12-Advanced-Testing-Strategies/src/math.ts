@@ -1,8 +1,7 @@
 // export all the functions, variables and types from the module as named exports
 // import all the functions, variables and types from the module as named imports
-// import { Utils } from './array';
 
-export module MathUtils {
+export namespace MathUtils {
   export const sum = (a: number, b: number): number => a + b;
   export const subtract = (a: number, b: number): number => a - b;
   export const multiply = (a: number, b: number): number => a * b;

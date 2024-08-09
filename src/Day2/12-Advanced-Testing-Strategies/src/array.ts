@@ -1,4 +1,4 @@
-export module ArrayUtils {
+export namespace ArrayUtils {
   export const sumArray = (arr: number[]): number => arr.reduce((acc, val) => acc + val, 0);
   export const multiplyArray = (arr: number[]): number => arr.reduce((acc, val) => acc * val, 1);
   export const minArray = (arr: number[]): number => Math.min(...arr);
